@@ -1,0 +1,21 @@
+{
+  "name": "api-origincion-deducible-impl-v1",
+  "version": "1.0.0",
+  "description": "API para calcular el deducible",
+  "scripts": {
+    "start": "serverless offline start --stage DESA",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
+  "author": "Maria Luna",
+  "license": "NONE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marialunatito/api-origincion-deducible-impl-v1"
+  },
+  "devDependencies": {
+    "jest": "27.0.4",
+    "jest-cucumber": "3.0.1",
+    "serverless-offline": "~5.12.0"
+  }
+}

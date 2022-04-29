@@ -18,8 +18,7 @@ module.exports = {
       const filtroTaller = textoTaller.match(/(otro(s)? )?taller[\wá-ú\t, ]+(\d+(.\d+)?%|\n|$|\)|\.)/gi)[0];
       const palabraFiltroEncontrada = filtroTaller.search(/preferencia|especial|afiliado|otro/gi);
       let taller = filtroTaller.replace(/(\s*taller(es)?\s+|,\s+\d+(.\d+)?%)/gi, '');
-      taller = palabraFiltroEncontrada === -1 ? taller.replace(/(\s*taller(es)?\s+|,\s+\d+(.\d+)?%)/gi, '').trimEnd() : TALLER_DEFECTO;
-      return taller;
+      return palabraFiltroEncontrada === -1 ? taller.replace(/(\s*taller(es)?\s+|,\s+\d+(.\d+)?%)/gi, '').trimEnd() : TALLER_DEFECTO;
     },
     extraerMarca(textoTaller) {
       const textoMarca = textoTaller.match(/marca\s+[\wá-ú, ]+:/gi);

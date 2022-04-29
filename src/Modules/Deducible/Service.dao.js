@@ -11,8 +11,7 @@ module.exports = {
     },
     extraerTipoTaller(textoTaller) {
       const tipoTaller = textoTaller.match(/\bmultimarca\b/gi);
-      let tipo = tipoTaller ? (tipoTaller[0][0].toUpperCase() + tipoTaller[0].slice(1)) : (TIPO_DEFECTO);
-      return tipo;
+      return tipoTaller ? (tipoTaller[0][0].toUpperCase() + tipoTaller[0].slice(1)) : (TIPO_DEFECTO);
     },
     extraerTaller(textoTaller) {
       const filtroTaller = textoTaller.match(/(otro(s)? )?taller[\wá-ú\t, ]+(\d+(.\d+)?%|\n|$|\)|\.)/gi)[0];
